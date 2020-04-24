@@ -1,6 +1,8 @@
 import os
 import json
 
+#-*-coding: utf-8 -*-
+
 os.chdir("..")
 
 with open('WeekTest.json') as jsons:
