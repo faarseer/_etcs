@@ -44,10 +44,10 @@ while True:
         }
     print("new data: ")
     print(row)
-    
     if date in data["WeekTest"] :
         isGR = False;
         for test in data["WeekTest"][date] :
+            print(test)
             if (test["Grade"] == grade) and (test["Range"] == _range) :
                 isGR = True
                 if name in test["Score"] :
@@ -63,7 +63,7 @@ while True:
                     test["Score"][name] = score
         
         if not isGR:
-            data["WeekTest"][date].append(row[date])            
+            data["WeekTest"][date].append(row[date][0])            
 
         print("Update :  "+date)
         print(data["WeekTest"][date])
